@@ -1,0 +1,62 @@
+*{
+  margin: 0 auto;
+  padding: 0 ;
+  box-sizing: border-box;
+  font-family: 'Inter'; 
+}
+body {
+  height: 100vh;
+}
+header {
+  width: auto;
+  height: 295px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(92.33deg, #087990 0.12%, #055160 100%);
+}
+.head {
+  margin: 0 auto;
+  color: #cff4fc;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 87px;
+}
+.text_header {
+  margin: 0 auto;
+  color: #cff4fc;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 36px;
+}
+.map_search{
+  margin-bottom: 50px;
+}
+
+input {
+  height: 64px;
+  width: 820px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #CED4DA;
+  border-radius: 4px;
+  padding: 0 32px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 21px;
+  color: #ABB5BE;
+  margin-bottom: 48px;
+}
+input {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
