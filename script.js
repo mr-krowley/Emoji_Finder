@@ -1,10 +1,11 @@
 import { data } from "./emoji.js";
-console.log(data);
-// let obj = {
-//   symbol: "💯",
-//   title: "100",
-//   keywords: "Hundred, points, symbol, wow, win, perfect, parties",
-// };
+
+// let newData;
+// function unic(params) {
+//    newData = data.map((object) => ({...object, keywords: [...new Set(object.keywords.split(" "))].join(" ")}));
+//    return newData;
+//  }
+
 function createCard(obj) {
   // let card = document.createElement("div"); // создание саммой карточки
   // card.setAttribute("class", "card");
