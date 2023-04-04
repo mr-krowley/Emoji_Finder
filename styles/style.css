@@ -1,42 +1,42 @@
-*{
-  margin: 0 auto;
-  padding: 0 ;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Inter'; 
 }
+
 body {
   height: 100vh;
 }
+
 header {
-  width: auto;
+  background-image: url(../bk/Rectangle\ 22х.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 295px;
+  padding-top: 68px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: linear-gradient(92.33deg, #087990 0.12%, #055160 100%);
+  align-items: center;
 }
-.head {
-  margin: 0 auto;
-  color: #cff4fc;
-  text-align: center;
-  font-style: normal;
+
+h1 { 
   font-weight: 700;
   font-size: 72px;
   line-height: 87px;
-}
-.text_header {
-  margin: 0 auto;
-  color: #cff4fc;
+  color: #CFF4FC;
   text-align: center;
-  font-family: "Inter";
+  margin-bottom: 4px;
+}
+
+header > p {
   font-style: normal;
   font-weight: 400;
   font-size: 21px;
   line-height: 36px;
-}
-.map_search{
-  margin-bottom: 100px;
+  color: #CFF4FC;
+  text-align: center;
+  margin-bottom: 68px;
 }
 
 input {
@@ -53,10 +53,79 @@ input {
   color: #ABB5BE;
   margin-bottom: 48px;
 }
-input {
+
+input:focus {
   color: #212529;
   background-color: #fff;
   border-color: #bdbdbd;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
 }
+
+main {
+  background: #EDEEF3;
+}
+
+.container {
+  width: 986px;
+  padding: 80px 0 49px;
+  margin: 0 auto;
+  height: 100vh;
+  
+}
+
+.emoji_card {
+  height: 184px;
+  width: 316px;
+  background: #FFFFFF;
+  border: 1px solid #DEE2E6;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.emoji {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 18px;
+}
+
+.emoji_name {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 28px;
+  text-decoration: underline;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.emoji_keyworsds {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #3F444A
+}
+
+footer {
+  background: #EDEEF3;
+  padding-bottom: 17px;
+  color: #6C757D;
+  text-align: center;
+}
+
+
+.copyright:before {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 986px;
+  background-color: #CED4DA;
+  margin-bottom: 13px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
