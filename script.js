@@ -1,17 +1,13 @@
 import { data } from "./emoji.js";
 
-// let newData;
-// function unic(params) {
-//    newData = data.map((object) => ({...object, keywords: [...new Set(object.keywords.split(" "))].join(" ")}));
-//    return newData;
-//  }
 
 function createCard(obj) {
-  // let card = document.createElement("div"); // создание саммой карточки
-  // card.setAttribute("class", "card");
-  let container = document.querySelector(".container");  // обращение к контэниру
-  let card = document.querySelector(".emoji_card");     // обращение к карточке
  
+
+  let card = document.createElement("div");  // создание саммой карточки
+  card.classList.add("emoji_card");
+
+
   let symbol = document.createElement("p"); // создание   symbol
   symbol.setAttribute("class", "emoji");  
   symbol.textContent = obj.symbol;
@@ -26,10 +22,10 @@ function createCard(obj) {
 
   card.append(symbol, title, keywords); //вставка созданного в Html
 
-  container.append(card);
+  // container.append(card);
 }
 
-function reviewCard(arr) {
+function reviewCard(arr) {               // функция перебора карточек из data
 
   arr.forEach(function (elem) {
     createCard(elem);
@@ -38,6 +34,21 @@ function reviewCard(arr) {
   return arr;
 }
 reviewCard(data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // console.log(reviewCard(data));
 //createCard(data);
 
