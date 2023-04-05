@@ -51,7 +51,11 @@ function reviewCard(arr) {
 function searchFilter(event) {
   // функция обработчик поисковой строки
   let value = event.target.value.toLowerCase().trim();
-  let filterDate = unicData.filter((card) => card.title.includes(value) || card.keywords.includes(value) );
+  let filterDate = unicData.filter(
+    (card) =>
+      card.title.toLowerCase().includes(value) ||
+      card.keywords.toLowerCase().includes(value)
+  );
   container.innerHTML = "";
   reviewCard(filterDate);
   console.dir(value);
