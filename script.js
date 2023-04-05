@@ -18,7 +18,6 @@ function getUnicData(data) {
 function createCard(obj) {
   // функция создает одну карточку
 
-  
   let card = document.createElement("div"); // создание саммой карточки
   card.classList.add("emoji_card");
 
@@ -49,7 +48,7 @@ function reviewCard(arr) {
 }
 
 function searchFilter(event) {
-  // функция обработчик поисковой строки
+  // функция обработчик поисковой строки сравнение ввода с ключевыми словами карточек
   let value = event.target.value.toLowerCase().trim();
   let filterDate = unicData.filter(
     (card) =>
@@ -62,58 +61,10 @@ function searchFilter(event) {
   console.log("работаю");
 }
 
+(function main() { 
+  // самовызывающаяся функция main точкa входа в програму
+  reviewCard(unicData);
+})();
 
-
- 
-
-reviewCard(unicData);
 input.addEventListener("input", searchFilter);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(reviewCard(data));
-//createCard(data);
-
-// function createHeader(obj) {
-//   let header = document.querySelector("header")
-//   //let imput = document.querySelector("form")
-
-//   let h1 = document.createElement("h1");
-//   h1.textContent = "Emoji Finder";
-
-//   let p = document.createElement("p");
-//   p.textContent = "Find emoji by keywords";
-
-//   let imput = document.createElement("imput");
-//   imput.textContent = imput;
-
-//   header.append(h1,p,imput);
-// }
-// createHeader();
