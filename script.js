@@ -1,9 +1,10 @@
 import { data } from "./emoji.js";
-
+const input = document.querySelector("input");
 const unicData = getUnicData(data);
-
+let container = document.querySelector(".container");
 
 function getUnicData(data) {
+  // функция  переберающая входящие данные и удаляет оставляя уникальные keywords
   const unicData = [];
   data.forEach((card) => {
     unicData.push({
@@ -14,13 +15,10 @@ function getUnicData(data) {
   return unicData;
 }
 
-
-
-
-
 function createCard(obj) {
+  // функция создает одну карточку
 
-  let container = document.querySelector(".container")
+  
   let card = document.createElement("div"); // создание саммой карточки
   card.classList.add("emoji_card");
 
@@ -38,21 +36,63 @@ function createCard(obj) {
 
   card.append(symbol, title, keywords); //вставка созданного в Html
 
-  
-   container.append(card);
+  container.append(card);
 }
 
 function reviewCard(arr) {
-  // функция перебора карточек из data
-
+  //функция перебора элементов из  передоваемого data она же и вызывает метот отрисовки createCard
   arr.forEach(function (elem) {
     createCard(elem);
   });
 
-  return arr;
+  //return arr;
 }
 
+function searchFilter(event) {
+  // функция обработчик поисковой строки
+  let value = event.target.value.toLowerCase().trim();
+  let filterDate = unicData.filter((card) => card.title.includes(value) || card.keywords.includes(value) );
+  container.innerHTML = "";
+  reviewCard(filterDate);
+  console.dir(value);
+  console.log("работаю");
+}
+
+
+
+ 
+
 reviewCard(unicData);
+input.addEventListener("input", searchFilter);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // console.log(reviewCard(data));
 //createCard(data);
